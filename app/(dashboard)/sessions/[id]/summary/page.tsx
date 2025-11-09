@@ -330,7 +330,7 @@ export default function SessionSummaryPage() {
           ) : (
             <div className="text-center py-8 text-muted-foreground">
               <Sparkles className="h-12 w-12 mx-auto mb-2 opacity-50" />
-              <p>Cliquez sur "Générer le résumé" pour obtenir une analyse IA</p>
+              <p>Cliquez sur &quot;Générer le résumé&quot; pour obtenir une analyse IA</p>
             </div>
           )}
         </CardContent>

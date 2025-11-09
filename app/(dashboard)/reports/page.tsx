@@ -294,7 +294,7 @@ export default function ReportsPage() {
                   <FileText className="h-8 w-8" />
                   <span>Exporter en PDF</span>
                   <span className="text-xs opacity-70">
-                    Format idéal pour l'impression
+                    Format idéal pour l&apos;impression
                   </span>
                 </>
               )}
@@ -314,7 +314,7 @@ export default function ReportsPage() {
                   <Download className="h-8 w-8" />
                   <span>Exporter en Excel</span>
                   <span className="text-xs opacity-70">
-                    Format idéal pour l'analyse
+                    Format idéal pour l&apos;analyse
                   </span>
                 </>
               )}

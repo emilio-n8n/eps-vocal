@@ -100,7 +100,7 @@ export default function NewSessionPage() {
         <CardHeader>
           <CardTitle>Configuration de la session</CardTitle>
           <CardDescription>
-            Remplissez les informations de votre session d'EPS
+            Remplissez les informations de votre session d&apos;EPS
           </CardDescription>
         </CardHeader>
         <CardContent>

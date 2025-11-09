@@ -30,7 +30,7 @@ export default function HomePage() {
           Carnet Numérique Sport
         </h2>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          L'assistant vocal intelligent pour les professeurs d'EPS. 
+          L&apos;assistant vocal intelligent pour les professeurs d&apos;EPS. 
           Prenez des notes automatiquement pendant vos cours et générez des rapports en un clic.
         </p>
         <div className="flex gap-4 justify-center">
@@ -73,7 +73,7 @@ export default function HomePage() {
               </div>
               <CardTitle>L'IA analyse</CardTitle>
               <CardDescription>
-                L'intelligence artificielle identifie automatiquement les élèves et catégorise vos observations
+                Simplifiez l&apos;évaluation de vos élèves en EPS grâce à l&apos;intelligence artificielle qui identifie automatiquement les élèves et catégorise vos observations
               </CardDescription>
             </CardHeader>
           </Card>
@@ -85,7 +85,7 @@ export default function HomePage() {
               </div>
               <CardTitle>Rapports automatiques</CardTitle>
               <CardDescription>
-                Générez des rapports PDF et Excel pour les parents et l'administration en un clic
+                Générez des rapports PDF et Excel pour les parents et l&apos;administration en un clic
               </CardDescription>
             </CardHeader>
           </Card>
@@ -104,7 +104,7 @@ export default function HomePage() {
               <div>
                 <h4 className="font-semibold mb-2">Gain de temps énorme</h4>
                 <p className="text-muted-foreground">
-                  Plus besoin de passer des heures à rédiger vos observations après les cours
+                  Plus besoin de prendre des notes pendant le cours. Concentrez-vous sur l&#39;enseignement.
                 </p>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
               <div>
                 <h4 className="font-semibold mb-2">Suivi personnalisé</h4>
                 <p className="text-muted-foreground">
-                  Chaque élève bénéficie d'un suivi détaillé de ses progrès et performances
+                  Chaque élève bénéficie d&apos;un suivi détaillé de ses progrès et performances
                 </p>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function HomePage() {
           Prêt à simplifier votre travail ?
         </h3>
         <p className="text-xl text-muted-foreground mb-8">
-          Rejoignez les professeurs d'EPS qui utilisent déjà EPS Vocal
+          Rejoignez les professeurs d&apos;EPS qui utilisent déjà EPS Vocal
         </p>
         <Link href="/register">
           <Button size="lg" className="gap-2">

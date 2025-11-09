@@ -64,7 +64,7 @@ export default function SessionsPage() {
         <div>
           <h1 className="text-3xl font-bold">Sessions</h1>
           <p className="text-muted-foreground mt-1">
-            Historique de vos sessions d'EPS
+            Historique de vos sessions d&apos;EPS
           </p>
         </div>
         <Link href="/sessions/new">

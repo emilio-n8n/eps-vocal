@@ -169,11 +169,11 @@ export default function DashboardPage() {
             <CardTitle>🎉 Bienvenue sur EPS Vocal !</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p>Pour commencer à utiliser l'application :</p>
+            <p>Pour commencer à utiliser l&apos;application :</p>
             <ol className="list-decimal list-inside space-y-2 text-sm">
-              <li>Créez votre première classe</li>
+              Commencez par créer votre première classe et ajouter vos élèves.
               <li>Ajoutez vos élèves</li>
-              <li>Démarrez une session et utilisez la reconnaissance vocale</li>
+              <li>Démarrer une session et utiliser la reconnaissance vocale</li>
               <li>Générez des rapports automatiquement</li>
             </ol>
             <Link href="/classes/new">

@@ -318,7 +318,7 @@ export default function ActiveSessionPage() {
               {isListening ? (
                 <>
                   <MicOff className="mr-2 h-6 w-6" />
-                  Arrêter l'enregistrement
+                  Arrêter l&apos;enregistrement
                 </>
               ) : (
                 <>
