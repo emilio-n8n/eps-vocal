@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     // Get session and students
     const { data: session } = await supabase
       .from('sessions')
-      .select('class_id')
+      .select('class_id, sport')
       .eq('id', sessionId)
       .eq('teacher_id', user.id)
       .single()
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
       .eq('class_id', session.class_id)
 
     // Process with AI
-    const processed = await processObservation(text, students || [])
+    const processed = await processObservation(text, students || [], session.sport)
 
     return NextResponse.json(processed)
   } catch (error) {
