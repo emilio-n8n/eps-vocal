@@ -146,7 +146,7 @@ export default function ActiveSessionPage() {
       if (insertError) throw insertError
 
       // Process with AI
-      const processed = await processObservation(text, students)
+      const processed = await processObservation(text, students, session?.sport || '')
 
       // Update observation with AI results
       const { error: updateError } = await supabase
