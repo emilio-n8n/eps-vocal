@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { ArrowLeft, Download, FileText, Loader2, TrendingUp, Users, Sparkles } from 'lucide-react'
 import Link from 'next/link'
-import { formatDate, formatDuration, getInitials, getCategoryColor, getSentimentColor } from '@/lib/utils'
+import { formatDate, formatElapsedTime, getInitials, getCategoryColor, getSentimentColor } from '@/lib/utils'
 import type { Session, Student, Observation } from '@/types'
 
 type SessionWithClass = Session & {
@@ -254,7 +254,7 @@ export default function SessionSummaryPage() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatDuration(stats.duration)}</div>
+            <div className="text-2xl font-bold">{formatElapsedTime(stats.duration)}</div>
           </CardContent>
         </Card>
 
