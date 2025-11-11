@@ -13,12 +13,16 @@ import { Mic, MicOff, Square, Clock, Users, AlertCircle } from 'lucide-react'
 import { getInitials, getCategoryColor, getSentimentColor, formatDuration } from '@/lib/utils'
 import type { Session, Student, Observation } from '@/types'
 
+type SessionWithClass = Session & {
+  class?: { name: string; level: string } | null
+}
+
 export default function ActiveSessionPage() {
   const params = useParams()
   const router = useRouter()
   const sessionId = params.id as string
 
-  const [session, setSession] = useState<Session | null>(null)
+  const [session, setSession] = useState<SessionWithClass | null>(null)
   const [students, setStudents] = useState<Student[]>([])
   const [observations, setObservations] = useState<Observation[]>([])
   const [loading, setLoading] = useState(true)

@@ -13,12 +13,16 @@ import Link from 'next/link'
 import { formatDate, formatDuration, getInitials, getCategoryColor, getSentimentColor } from '@/lib/utils'
 import type { Session, Student, Observation } from '@/types'
 
+type SessionWithClass = Session & {
+  class?: { name: string; level: string } | null
+}
+
 export default function SessionSummaryPage() {
   const params = useParams()
   const router = useRouter()
   const sessionId = params.id as string
 
-  const [session, setSession] = useState<Session | null>(null)
+  const [session, setSession] = useState<SessionWithClass | null>(null)
   const [students, setStudents] = useState<Student[]>([])
   const [observations, setObservations] = useState<Observation[]>([])
   const [aiSummary, setAiSummary] = useState<string>('')

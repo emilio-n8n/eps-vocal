@@ -10,8 +10,12 @@ import Link from 'next/link'
 import { formatDate, formatDuration } from '@/lib/utils'
 import type { Session } from '@/types'
 
+type SessionWithClass = Session & {
+  class?: { name: string; level: string } | null
+}
+
 export default function SessionsPage() {
-  const [sessions, setSessions] = useState<Session[]>([])
+  const [sessions, setSessions] = useState<SessionWithClass[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
