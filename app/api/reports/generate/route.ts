@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
 
       const { data: session } = await supabase
         .from('sessions')
-        .select('class_id')
+        .select('class_id, sport, date')
         .eq('id', sessionId)
         .single()
 
@@ -32,15 +32,26 @@ export async function POST(request: NextRequest) {
         .select('*')
         .eq('class_id', session?.class_id)
 
-      const summary = await generateSessionSummary(observations || [], students || [])
+      const result = await generateSessionSummary(
+        session?.sport || '',
+        session?.date || new Date().toISOString(),
+        students?.length || 0,
+        (observations || []).map(o => ({
+          raw_text: o.raw_text || '',
+          category: o.category || 'general',
+          sentiment: o.sentiment || 'neutral'
+        }))
+      )
+
+      const summaryText = `${result.summary}\n\n**Points forts:**\n${result.highlights.map(h => `- ${h}`).join('\n')}\n\n**Points d'attention:**\n${result.areasForImprovement.map(a => `- ${a}`).join('\n')}\n\n**Recommandations:**\n${result.recommendations.map(r => `- ${r}`).join('\n')}`
 
       // Save summary
       await supabase
         .from('sessions')
-        .update({ ai_summary: summary })
+        .update({ ai_summary: summaryText })
         .eq('id', sessionId)
 
-      return NextResponse.json({ summary })
+      return NextResponse.json({ summary: summaryText })
     }
 
     if (type === 'student') {
