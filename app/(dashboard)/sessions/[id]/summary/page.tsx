@@ -80,14 +80,28 @@ export default function SessionSummaryPage() {
   const handleGenerateSummary = async () => {
     setGeneratingSummary(true)
     try {
-      const summary = await generateSessionSummary(observations, students)
-      setAiSummary(summary)
+      if (!session) return
+      
+      const result = await generateSessionSummary(
+        session.sport,
+        session.date,
+        students.length,
+        observations.map(o => ({
+          raw_text: o.raw_text || '',
+          category: o.category || 'general',
+          sentiment: o.sentiment || 'neutral'
+        }))
+      )
+      
+      const summaryText = `${result.summary}\n\n**Points forts:**\n${result.highlights.map(h => `- ${h}`).join('\n')}\n\n**Points d'attention:**\n${result.areasForImprovement.map(a => `- ${a}`).join('\n')}\n\n**Recommandations:**\n${result.recommendations.map(r => `- ${r}`).join('\n')}`
+      
+      setAiSummary(summaryText)
 
       // Save to database
       const supabase = createClient()
       await supabase
         .from('sessions')
-        .update({ ai_summary: summary })
+        .update({ ai_summary: summaryText })
         .eq('id', sessionId)
     } catch (error) {
       console.error('Error generating summary:', error)
