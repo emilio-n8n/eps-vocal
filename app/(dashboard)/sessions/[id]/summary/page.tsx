@@ -401,7 +401,7 @@ export default function SessionSummaryPage() {
                   <div className="flex items-center gap-3 mb-3">
                     <Avatar>
                       <AvatarFallback>
-                        {getInitials(student.first_name, student.last_name)}
+                        {getInitials(`${student.first_name} ${student.last_name}`)}
                       </AvatarFallback>
                     </Avatar>
                     <div>

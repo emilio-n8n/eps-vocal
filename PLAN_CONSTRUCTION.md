@@ -28,7 +28,7 @@ Application web progressive (PWA) pour les professeurs d'EPS permettant la prise
 - **Export Excel:** xlsx
 
 **Déploiement:**
-- **Hosting:** Vercel
+- **Hosting:** netlify
 - **Base de données:** Supabase Cloud
 - **CI/CD:** GitHub Actions
 
