@@ -302,7 +302,7 @@ export default function SessionSummaryPage() {
                 Résumé IA de la session
               </CardTitle>
               <CardDescription>
-                Analyse automatique générée par l'intelligence artificielle
+                Analyse automatique générée par l&apos;intelligence artificielle
               </CardDescription>
             </div>
             {!aiSummary && (

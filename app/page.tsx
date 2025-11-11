@@ -71,7 +71,7 @@ export default function HomePage() {
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <TrendingUp className="h-6 w-6 text-primary" />
               </div>
-              <CardTitle>L'IA analyse</CardTitle>
+              <CardTitle>L&apos;IA analyse</CardTitle>
               <CardDescription>
                 Simplifiez l&apos;évaluation de vos élèves en EPS grâce à l&apos;intelligence artificielle qui identifie automatiquement les élèves et catégorise vos observations
               </CardDescription>

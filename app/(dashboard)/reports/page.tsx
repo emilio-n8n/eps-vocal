@@ -274,9 +274,9 @@ export default function ReportsPage() {
       {/* Export Options */}
       <Card>
         <CardHeader>
-          <CardTitle>Options d'export</CardTitle>
+          <CardTitle>Options d&apos;export</CardTitle>
           <CardDescription>
-            Choisissez le format d'export de votre rapport
+            Choisissez le format d&apos;export de votre rapport
           </CardDescription>
         </CardHeader>
         <CardContent>
