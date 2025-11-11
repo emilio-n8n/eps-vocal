@@ -260,7 +260,7 @@ export default function ActiveSessionPage() {
                     <div className="flex flex-col items-center text-center space-y-2">
                       <Avatar className="h-16 w-16">
                         <AvatarFallback className="text-lg">
-                          {getInitials(student.first_name, student.last_name)}
+                          {getInitials(`${student.first_name} ${student.last_name}`)}
                         </AvatarFallback>
                       </Avatar>
                       <div>
@@ -368,7 +368,7 @@ export default function ActiveSessionPage() {
                         {student && (
                           <Avatar className="h-8 w-8">
                             <AvatarFallback className="text-xs">
-                              {getInitials(student.first_name, student.last_name)}
+                              {getInitials(`${student.first_name} ${student.last_name}`)}
                             </AvatarFallback>
                           </Avatar>
                         )}
