@@ -9,9 +9,13 @@ import { Label } from '@/components/ui/label'
 import { FileText, Download, TrendingUp, Users, Calendar, Loader2 } from 'lucide-react'
 import type { Class, Session } from '@/types'
 
+type SessionWithClass = Session & {
+  class?: { name: string } | null
+}
+
 export default function ReportsPage() {
   const [classes, setClasses] = useState<Class[]>([])
-  const [sessions, setSessions] = useState<Session[]>([])
+  const [sessions, setSessions] = useState<SessionWithClass[]>([])
   const [loading, setLoading] = useState(true)
   const [generating, setGenerating] = useState(false)
 
