@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Mic, MicOff, Square, Clock, Users, AlertCircle } from 'lucide-react'
-import { getInitials, getCategoryColor, getSentimentColor, formatDuration } from '@/lib/utils'
+import { getInitials, getCategoryColor, getSentimentColor, formatElapsedTime } from '@/lib/utils'
 import type { Session, Student, Observation } from '@/types'
 
 type SessionWithClass = Session & {
@@ -225,7 +225,7 @@ export default function ActiveSessionPage() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 text-lg font-mono">
               <Clock className="h-5 w-5" />
-              <span>{formatDuration(elapsedTime)}</span>
+              <span>{formatElapsedTime(elapsedTime)}</span>
             </div>
             <Button variant="destructive" onClick={handleEndSession}>
               <Square className="mr-2 h-4 w-4" />
